@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <style>
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main container styling */
+        .gallery-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Card styling for each image and text section */
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image styling */
+        .gallery-item img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Text styling */
+        .gallery-item .text-content {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Mobile responsiveness */
+        @media (min-width: 600px) {
+            .gallery-item {
+                flex-direction: row;
+            }
+
+            .gallery-item img {
+                width: 50%;
+                max-height: none;
+                margin-right: 15px;
+            }
+
+            .gallery-item .text-content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item">
+            <img src="photo1.jpg" alt="Description of Photo 1">
+            <div class="text-content">
+                <h2>Photo Title 1</h2>
+                <p>Here is a brief description of the first photo. This text provides more context about the image.</p>
+            </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item">
+            <img src="photo2.jpg" alt="Description of Photo 2">
+            <div class="text-content">
+                <h2>Photo Title 2</h2>
+                <p>Here is a brief description of the second photo. This text provides more context about the image.</p>
+            </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item">
+            <img src="photo3.jpg" alt="Description of Photo 3">
+            <div class="text-content">
+                <h2>Photo Title 3</h2>
+                <p>Here is a brief description of the third photo. This text provides more context about the image.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
